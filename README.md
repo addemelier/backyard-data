@@ -27,20 +27,25 @@ This project builds a data pipeline over Seattle's public building permits datas
 
 ## Running locally
 
+This project uses [uv](https://docs.astral.sh/uv/) for Python dependency management.
+
 ```bash
+# Install uv (if you don't have it)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 # Clone the repo
 git clone https://github.com/addemelier/backyard-data.git
 cd backyard-data
 
-# Set up environment
+# Create virtual environment and install dependencies
+uv sync
+
+# Set up environment variables
 cp .env.example .env
 # Fill in .env with your values
-
-# Install dependencies
-pip install -r requirements.txt
 ```
 
-> Full setup instructions will be added as the project matures.
+> Dependencies will be added to pyproject.toml as the project grows.
 
 ## Follow along
 
