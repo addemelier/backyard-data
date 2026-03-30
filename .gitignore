@@ -37,5 +37,12 @@ Thumbs.db
 *.swp
 *.swo
 
+# Data — raw files are not committed
+data/raw/*.csv
+data/raw/*.json
+
+# Virtual environment
+.venv/
+
 # Secrets baseline
 .secrets.baseline
