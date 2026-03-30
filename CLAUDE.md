@@ -16,9 +16,8 @@ This project uses [uv](https://docs.astral.sh/uv/). Always use uv commands — n
 This project is tracked in Notion. Use the Notion MCP integration to read and update tasks as you work.
 
 **Finding tasks:**
-- Search by name: `notion-search "task name"`
-- Main project page ID: `5d5adfd5-544b-8219-8a0b-8136ac66b663`
-- Tasks database ID: `cbeadfd5-544b-8335-a0be-016ec0983099`
+- Search Notion for "Backyard Data" to locate the project page and tasks database
+- From there you can find individual tasks by name using `notion-search`
 
 **Task status values** (use exactly as written):
 - `Not started`
