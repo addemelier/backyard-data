@@ -47,6 +47,23 @@ cp .env.example .env
 
 > Dependencies will be added to pyproject.toml as the project grows.
 
+## Security
+
+**Reporting a vulnerability:** Open a GitHub issue with the label `security`. Do not include secret values in issue text.
+
+**If a secret is accidentally committed:** Rotate it immediately — git history cannot be trusted even after a revert. Then remove the secret from history using `git filter-repo`.
+
+**Running security checks locally:**
+```bash
+# Scan for secrets
+uvx detect-secrets scan
+
+# Audit Python dependencies for known CVEs
+uvx pip-audit
+```
+
+This repo uses [GitHub secret scanning](https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning) (enabled in repo settings), [Dependabot](https://docs.github.com/en/code-security/dependabot) for automated dependency updates, and `pip-audit` in CI on every PR.
+
 ## Follow along
 
 This project is documented on Substack as it's built. [Link coming soon.]

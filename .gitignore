@@ -44,5 +44,3 @@ data/raw/*.json
 # Virtual environment
 .venv/
 
-# Secrets baseline
-.secrets.baseline
