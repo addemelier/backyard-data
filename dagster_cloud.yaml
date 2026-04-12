@@ -1,0 +1,4 @@
+locations:
+- code_source:
+    module_name: backyard_data.definitions
+  location_name: backyard_data
