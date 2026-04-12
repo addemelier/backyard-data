@@ -11,13 +11,10 @@ dependencies = [
     "dagster-webserver>=1.13.0",
     "dbt-core>=1.11.8",
     "dbt-postgres>=1.10.0",
-    "jupyter>=1.1.1",
-    "matplotlib>=3.10.8",
-    "pandas>=3.0.1",
+    "pandas>=2.2.0",
     "psycopg2-binary>=2.9.11",
     "python-dotenv>=1.2.2",
     "requests>=2.33.0",
-    "seaborn>=0.13.2",
 ]
 
 [tool.pytest.ini_options]
@@ -31,6 +28,11 @@ code_location_name = "backyard_data"
 extend-exclude = ["notebooks/"]
 
 [dependency-groups]
+notebooks = [
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.8",
+    "seaborn>=0.13.2",
+]
 dev = [
     "detect-secrets>=1.5.0",
     "pre-commit>=4.5.1",

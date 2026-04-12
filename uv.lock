@@ -202,13 +202,10 @@ dependencies = [
     { name = "dagster-webserver" },
     { name = "dbt-core" },
     { name = "dbt-postgres" },
-    { name = "jupyter" },
-    { name = "matplotlib" },
     { name = "pandas" },
     { name = "psycopg2-binary" },
     { name = "python-dotenv" },
     { name = "requests" },
-    { name = "seaborn" },
 ]
 
 [package.dev-dependencies]
@@ -220,6 +217,11 @@ dev = [
     { name = "sqlfluff" },
     { name = "sqlfluff-templater-dbt" },
 ]
+notebooks = [
+    { name = "jupyter" },
+    { name = "matplotlib" },
+    { name = "seaborn" },
+]
 
 [package.metadata]
 requires-dist = [
@@ -229,13 +231,10 @@ requires-dist = [
     { name = "dagster-webserver", specifier = ">=1.13.0" },
     { name = "dbt-core", specifier = ">=1.11.8" },
     { name = "dbt-postgres", specifier = ">=1.10.0" },
-    { name = "jupyter", specifier = ">=1.1.1" },
-    { name = "matplotlib", specifier = ">=3.10.8" },
-    { name = "pandas", specifier = ">=3.0.1" },
+    { name = "pandas", specifier = ">=2.2.0" },
     { name = "psycopg2-binary", specifier = ">=2.9.11" },
     { name = "python-dotenv", specifier = ">=1.2.2" },
     { name = "requests", specifier = ">=2.33.0" },
-    { name = "seaborn", specifier = ">=0.13.2" },
 ]
 
 [package.metadata.requires-dev]
@@ -246,6 +245,11 @@ dev = [
     { name = "ruff", specifier = ">=0.15.9" },
     { name = "sqlfluff", specifier = ">=4.1.0" },
     { name = "sqlfluff-templater-dbt", specifier = ">=4.1.0" },
+]
+notebooks = [
+    { name = "jupyter", specifier = ">=1.1.1" },
+    { name = "matplotlib", specifier = ">=3.10.8" },
+    { name = "seaborn", specifier = ">=0.13.2" },
 ]
 
 [[package]]

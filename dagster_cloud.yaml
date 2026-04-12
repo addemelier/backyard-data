@@ -1,4 +1,6 @@
 locations:
-- code_source:
-    module_name: backyard_data.definitions
-  location_name: backyard_data
+  - location_name: backyard-data
+    code_source:
+      package_name: backyard_data
+    build:
+      directory: .
