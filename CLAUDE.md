@@ -114,4 +114,10 @@ This project is tracked in Notion. Use the Notion MCP integration to read and up
 **Workflow:**
 1. Fetch the relevant task from Notion before starting work
 2. Set status to `In progress` when you begin
-3. Set status to `Done` when the work is merged
+3. Individual tasks can be marked `Done` as they are completed
+4. **Before setting any project status to `Done`**, you MUST perform an epic review — do not call `notion-update-page` with `Status: Done` on a project until this is complete:
+   - Read the codebase changes made during the epic
+   - Review through three lenses: staff data engineer, staff security engineer, staff frontend engineer (see `.claude/commands/` for each persona's focus areas)
+   - For each high-priority concern found, create a Notion task with status `Not started` and priority `High` before closing the epic
+   - Low-priority concerns can be noted in the review output but do not need tickets
+   - Only then mark the project `Done`
