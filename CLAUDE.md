@@ -101,23 +101,17 @@ This project is tracked in Notion. Use the Notion MCP integration to read and up
 - Search Notion for "Backyard Data" to locate the project page and tasks database
 - From there you can find individual tasks by name using `notion-search`
 
-**Task status values** (use exactly as written):
-- `Not started`
-- `In progress`
-- `Done`
-
-**Story/project status values:**
-- `Planning`
-- `In progress`
-- `Done`
+**Two separate Notion databases:**
+- **Tasks** (`collection://d8fadfd5-544b-83e9-92cb-07ec8a8a1832`) — individual units of work within a project. Status values: `Not started`, `In progress`, `Done`
+- **Projects** (`collection://f22adfd5-544b-83c4-94a7-875f3f68a725`) — epics that group multiple tasks. Status values: `Planning`, `In progress`, `Done`
 
 **Workflow:**
 1. Fetch the relevant task from Notion before starting work
-2. Set status to `In progress` when you begin
-3. Individual tasks can be marked `Done` as they are completed
-4. **Before setting any project status to `Done`**, you MUST perform an epic review — do not call `notion-update-page` with `Status: Done` on a project until this is complete:
+2. Set the **task** status to `In progress` when you begin; set the **project** status to `In progress` when you start the first task in it
+3. Mark individual **tasks** as `Done` as they are completed — no review needed
+4. **Before marking a *project* as `Done`** (i.e. before calling `notion-update-page` on a page from the Projects database with `Status: Done`), you MUST perform an epic review:
    - Read the codebase changes made during the epic
    - Review through three lenses: staff data engineer, staff security engineer, staff frontend engineer (see `.claude/commands/` for each persona's focus areas)
-   - For each high-priority concern found, create a Notion task with status `Not started` and priority `High` before closing the epic
-   - Low-priority concerns can be noted in the review output but do not need tickets
+   - For each high-priority concern found, create a new task in the Tasks database with status `Not started` and priority `High`
+   - Low-priority concerns can be noted but do not need tickets
    - Only then mark the project `Done`
