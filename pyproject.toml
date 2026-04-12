@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "dagster>=1.13.0",
+    "dagster-cloud>=1.13.0",
     "dagster-postgres>=0.29.0",
     "dagster-webserver>=1.13.0",
     "dbt-core>=1.11.8",
@@ -18,6 +19,13 @@ dependencies = [
     "requests>=2.33.0",
     "seaborn>=0.13.2",
 ]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.dagster]
+module_name = "backyard_data.definitions"
+code_location_name = "backyard_data"
 
 [tool.ruff]
 extend-exclude = ["notebooks/"]
