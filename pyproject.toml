@@ -3,7 +3,7 @@ name = "backyard-data"
 version = "0.1.0"
 description = "A data pipeline for exploring Seattle ADU building permits"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
     "dagster>=1.13.0",
     "dagster-cloud>=1.13.0",
@@ -11,7 +11,7 @@ dependencies = [
     "dagster-webserver>=1.13.0",
     "dbt-core>=1.11.8",
     "dbt-postgres>=1.10.0",
-    "pandas>=2.2.0",
+    "pandas>=3.0.1",
     "psycopg2-binary>=2.9.11",
     "python-dotenv>=1.2.2",
     "requests>=2.33.0",
