@@ -1,6 +1,6 @@
 locations:
   - location_name: backyard-data
     code_source:
-      package_name: backyard_data
+      module_name: backyard_data.definitions
     build:
       directory: .
